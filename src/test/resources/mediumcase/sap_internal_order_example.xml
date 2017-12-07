@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ordres>
+ <donnees numero="4PAGRIHUB   ">
+  <designation>AGRIHUB</designation>
+ </donnees>
+ <donnees numero="4PAQUITAINE ">
+  <designation>secteur Aquitaine</designation>
+ </donnees>
+ <donnees numero="4PARLESA    ">
+  <designation>ARLESA</designation>
+ </donnees>
+ <donnees numero="4PBRETAGNE  ">
+  <designation>secteur Bretagne</designation>
+ </donnees>
+ <donnees numero="4PCENTRE    ">
+  <designation>secteur Centre</designation>
+ </donnees>
+ <donnees numero="4PCENTREEST ">
+  <designation>secteur Centre Est</designation>
+ </donnees>
+</ordres>

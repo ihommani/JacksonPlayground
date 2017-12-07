@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<fournisseurs>
+ <donnees numero="1022      ">
+  <nom>Euralis Holding</nom>
+  <blacklist>NON</blacklist>
+ </donnees>
+ <donnees numero="1025      ">
+  <nom>EURALIS FINANCES</nom>
+  <blacklist>NON</blacklist>
+ </donnees>
+ <donnees numero="1104      ">
+  <nom>EURALIS NEGOCE</nom>
+  <blacklist>NON</blacklist>
+ </donnees>
+</fournisseurs>

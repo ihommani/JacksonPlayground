@@ -1,0 +1,16 @@
+<contacts>
+    <contact>
+        <firstName>ismael</firstName>
+        <name>hommani</name>
+        <age>30</age>
+        <address>5 rue des eglantines</address>
+        <phoneNumber>06654567821</phoneNumber>
+    </contact>
+    <contact>
+        <firstName>ismael</firstName>
+        <name>hommani</name>
+        <age>30</age>
+        <address>5 rue des eglantines</address>
+        <phoneNumber>06654567821</phoneNumber>
+    </contact>
+</contacts>
