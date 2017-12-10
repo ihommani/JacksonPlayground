@@ -12,11 +12,10 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 public class MediumCaseTest {
+    XmlMapper xmlMapper = new XmlMapper();
 
     @Test
     public void test_cost_center_serialisation() throws Exception {
-
-        XmlMapper xmlMapper = new XmlMapper();
 
         CostCenter costCenter = new CostCenter();
 
@@ -36,8 +35,6 @@ public class MediumCaseTest {
 
     @Test
     public void test_cost_center_deserialisation() throws Exception {
-        XmlMapper xmlMapper = new XmlMapper();
-
         URL resource = Resources.getResource("mediumcase/sap_cost_center_example.xml");
 
         Path path = Paths.get(resource.getPath());
@@ -51,8 +48,6 @@ public class MediumCaseTest {
 
     @Test
     public void test_internal_order_designation() throws Exception {
-        XmlMapper xmlMapper = new XmlMapper();
-
         URL resource = Resources.getResource("mediumcase/sap_internal_order_example.xml");
         Path path = Paths.get(resource.getPath());
         InternalOrder internalOrder = xmlMapper.readValue(path.toFile(), InternalOrder.class);
@@ -62,12 +57,31 @@ public class MediumCaseTest {
 
     @Test
     public void test_provider_deseriatlisation() throws Exception {
-        XmlMapper xmlMapper = new XmlMapper();
-
         URL resource = Resources.getResource("mediumcase/sap_provider_example.xml");
         Path path = Paths.get(resource.getPath());
         Provider provider = xmlMapper.readValue(path.toFile(), Provider.class);
 
         Assertions.assertThat(provider.getDatas()).hasSize(3);
+    }
+
+    @Test
+    public void test_purchaser_order_serialisation() throws Exception {
+        PurchaseOrder purchaseOrder = new PurchaseOrder();
+        purchaseOrder.setAmount(12.0);
+        purchaseOrder.setTitle("title");
+        purchaseOrder.setId("id");
+
+
+        PurchaseOrder.PosteData posteData1 = new PurchaseOrder.PosteData();
+        posteData1.setDesignation("designation1");
+        posteData1.setComment("comment1");
+
+        PurchaseOrder.PosteData posteData2 = new PurchaseOrder.PosteData();
+        posteData2.setDesignation("designation2");
+        posteData2.setComment("comment2");
+
+        purchaseOrder.setPoste(Arrays.asList(posteData1, posteData2));
+
+        xmlMapper.writeValue(Files.newBufferedWriter(Files.createTempFile("hello", "world")), purchaseOrder);
     }
 }
