@@ -1,7 +1,9 @@
 package model.simplecase;
 
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 @JsonInclude(value = JsonInclude.Include.NON_EMPTY)
 public class Contact {
@@ -26,6 +28,13 @@ public class Contact {
 
     public int getAge() {
         return age;
+    }
+
+    @JsonGetter("age")
+    @JacksonXmlProperty(isAttribute = true, localName = "civil_age")
+    public String getHumanReadableAge(){
+        return String.valueOf(this.age) + " years";
+
     }
 
     public String getAddress() {
