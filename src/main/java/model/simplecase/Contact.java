@@ -1,6 +1,9 @@
 package model.simplecase;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(value = JsonInclude.Include.NON_EMPTY)
 public class Contact {
 
     private String firstName;

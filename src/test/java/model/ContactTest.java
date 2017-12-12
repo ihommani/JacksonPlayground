@@ -19,7 +19,7 @@ import java.util.List;
 public class ContactTest {
 
     @Test
-    public void test_SimpleCase_serialisation() throws Exception {
+    public void test_SimpleCase_deserialisation() throws Exception {
         XmlMapper xmlMapper = new XmlMapper();
 
         URL resource = Resources.getResource("simplecase/simplecase1.xml");
@@ -32,7 +32,7 @@ public class ContactTest {
     }
 
     @Test
-    public void test_SimpleCase2_serialisation() throws Exception {
+    public void test_SimpleCase2_deserialisation() throws Exception {
         XmlMapper xmlMapper = new XmlMapper();
 
         URL resource = Resources.getResource("simplecase/simplecase2.xml");
@@ -46,7 +46,7 @@ public class ContactTest {
     }
 
     @Test
-    public void test_SimpleCase3_serialisation() throws Exception {
+    public void test_SimpleCase3_deserialisation() throws Exception {
         XmlMapper xmlMapper = new XmlMapper();
 
         URL resource = Resources.getResource("simplecase/contact-book.xml");
