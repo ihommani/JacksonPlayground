@@ -12,6 +12,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.time.temporal.ValueRange;
 import java.util.Arrays;
 import java.util.List;
@@ -87,9 +88,11 @@ public class ContactTest {
 
         Contact contact1 = new Contact();
         contact1.setFirstName("name1");
+        contact1.setAccount(100000000.23456D);
 
         Contact contact2 = new Contact();
-        contact1.setFirstName("name2");
+        contact2.setFirstName("name2");
+        contact2.setAccount(100000000.0D);
 
         List<Contact> contacts = Arrays.asList(contact1, contact2);
 
